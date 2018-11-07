@@ -1,0 +1,196 @@
+/*
+ * Page layout
+ */
+
+body {
+    background-color: #F7F9FB;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*
+ * Navigation
+ */
+
+nav {
+    background-color: transparent;
+}
+
+/*
+ * Bootstrap navbar
+ */
+
+.navbar-custom {
+    background-color: #687864;
+}
+
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+    /* padding: 0.8rem 1rem; */
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+    /* padding: 1rem 1rem; */
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #F7F9FB;
+    background-color: #818f7d; /* add background-color to active links */
+}
+
+/*
+ * Bootstrap Pagination
+ */
+
+.pagination > li.page-item {
+    /*border-radius: 10%;*/
+    background-color: transparent;
+    /*border: 1px solid #a3aca0;*/
+    font-size: 0.75rem;
+    font-weight: 800;
+    /* line-height: 1rem; */
+    text-decoration: none;
+    outline: none;
+}
+
+.pagination > li.page-link {
+    color: #ff0000;
+}
+
+
+.pagination > li.page-item.active {
+    background-color: #5085A5;
+    color: #f7f9fb;
+    padding: 0.25rem 0.75rem;
+}
+
+/*
+ * HTML 5 main
+ */
+
+main {
+    background-color: transparent;
+}
+
+.container-fluid {
+    background-color: transparent;
+    padding: 0.5rem 0.5rem;
+}
+
+
+/*
+ * Footer
+ */
+
+footer {
+    background-color: #687864;
+    /* padding: 0.8rem 1rem; */
+}
+
+footer a:link {
+    background-color: transparent;
+    color: #F7F9FB;
+    text-decoration: none;
+}
+
+footer a:active {
+    background-color: transparent;
+    color: #F7F9FB;
+}
+
+footer a:hover {
+    background-color: transparent;
+    color: #dbe2d9;
+    /* color: #D8C3A5; */
+}
+
+footer a:visited {
+    color: #818f7d;
+    text-decoration: none;
+}
+
+footer p {
+    background-color: #687864;
+    display: block;
+    text-align: left;
+    font-size: 0.875rem;
+    font-stretch: condensed;
+    color: #F7F9FB;
+}
+
+/*
+ * Headings
+ */
+
+h1, h2, h3, h4 {
+    color: #5085A5;
+    /* margin-top: 1em; */
+    /* margin-bottom: 0.5rem; */
+    text-align: left;
+}
+
+h2 {
+    font-weight: 700;
+    color: #31708E;
+}
+
+/*
+ * Paragraphs
+ */
+
+p {
+    /* color: #8E8D8A; */
+    color: #333333;
+    text-align: justify;
+}
+
+/* 
+ * header in detail page
+ */
+ .col-sm-2 p {
+    color: #687864;
+    font-weight: 800;
+ }
+
+/*
+ * Links
+ * https://www.w3schools.com/css/css_link.asp
+ */
+
+ ul a {
+    font-weight: 600;
+    outline: none;
+ }
+
+a:link {
+    background-color: transparent;
+    color: #5085A5;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: transparent;
+    color: #8FC1E3;
+    /* color: #D8C3A5; */
+}
+
+a:active {
+    background-color: transparent;
+    color: #8FC1E3;
+}
+
+a:visited {
+    background-color: transparent;
+    color: #7c7c7c;
+    text-decoration: none;
+}
+
+/* example: comment out padding */
+.container-fluid {
+    background-color: transparent;
+    /* padding: 0.5rem 0.5rem; */
+}
