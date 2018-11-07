@@ -228,10 +228,21 @@ pyvenv.cfg
 .venv
 pip-selfcheck.json
 
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
 ### Django secret file ###
-.**/secret.py
+**/secret.py
 
 # dumped data
-.sql
+*.sql
 
 
