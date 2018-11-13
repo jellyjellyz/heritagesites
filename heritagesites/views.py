@@ -40,6 +40,29 @@ class SiteDetailView(generic.DetailView):
 	model = HeritageSite
 	context_object_name = 'site'
 	template_name = 'heritagesites/site_detail.html'
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		country_area_display = []
+		region_display = []
+		for ca in self.object.country_area.all():
+			country_area_display.append(ca.country_area_name.strip())
+			temp = []
+			if ca.location.intermediate_region:
+				temp.append(ca.location.intermediate_region.intermediate_region_name)
+			elif ca.location.sub_region:
+				temp.append(ca.location.sub_region.sub_region_name)
+			elif ca.location.region:
+				temp.append(ca.location.region.region_name)
+			elif ca.location.planet:
+				temp.append(ca.location.planet.unsd_name)
+			temp = ' '.join(temp)
+			if temp not in region_display:
+				region_display.append(temp)
+
+		context['country_area_display'] = ', '.join(country_area_display)
+		context['region_display'] = ', '.join(region_display)
+		# print(context)
+		return context
 	
 @method_decorator(login_required, name='dispatch')
 class SiteCreateView(generic.View):
