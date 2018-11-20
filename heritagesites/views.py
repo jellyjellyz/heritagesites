@@ -6,10 +6,12 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.urls import reverse_lazy
 from django.shortcuts import redirect
+from django_filters.views import FilterView
 
 
 from .forms import HeritageSiteForm
 from .models import HeritageSite, CountryArea, HeritageSiteJurisdiction
+from .filters import HeritageSiteFilter
 
 def index(request):
 	return HttpResponse("Hello, world. You're at the UNESCO Heritage Sites index page.")
@@ -23,6 +25,10 @@ class AboutPageView(generic.TemplateView):
 
 class HomePageView(generic.TemplateView):
 	template_name = 'heritagesites/home.html'
+
+class SiteFilterView(FilterView):
+	filterset_class = HeritageSiteFilter
+	template_name = 'heritagesites/site_filter.html'
 
 class SiteListView(generic.ListView):
 	model = HeritageSite
